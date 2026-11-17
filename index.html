@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sayang Dino Tak?</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="hearts"></div>
+
+<main id="question" class="screen">
+    <h1>Sayang saya tak?</h1>
+    <p>Jawab dengan jujur...</p>
+
+    <input id="answer" type="text" placeholder="Taip jawapan kau...">
+    <button onclick="checkAnswer()">Hantar</button>
+    <p id="message"></p>
+</main>
+
+<main id="love" class="screen hidden">
+    <h1>Sayang awak jugakk! ♡</h1>
+    <p>Hehehe, tahu pun 🪽</p>
+</main>
+
+<main id="horror" class="screen hidden">
+    <h1 id="scaryText">TAK SAYANG</h1>
+    <div id="terminal"></div>
+    <h2 id="finalMessage"></h2>
+</main>
+
+<main id="error" class="hidden">
+    <div class="error-content">
+        <h2>This site can't be reached</h2>
+        <p>The webpage might be temporarily down or it may have moved permanently to a new web address.</p>
+        <p class="error-code">ERR_CONNECTION_RESET</p>
+        <button onclick="location.reload()">Reload</button>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
