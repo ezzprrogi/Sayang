@@ -1,0 +1,189 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    color: #111;
+    font-family: Georgia, serif;
+    min-height: 100vh;
+    overflow: hidden;
+    transition: background 1s, color 1s;
+}
+
+.screen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+}
+
+h1 {
+    font-size: 35px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+p {
+    margin-top: 15px;
+    color: #888;
+}
+
+input {
+    margin-top: 30px;
+    padding: 14px;
+    width: 260px;
+    border: none;
+    border-bottom: 1px solid #222;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    background: transparent;
+}
+
+button {
+    margin-top: 25px;
+    padding: 12px 35px;
+    background: #111;
+    color: white;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* LOVE EFFECT */
+
+#hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    bottom: -30px;
+    color: #f3a9bc;
+    animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* HORROR */
+
+body.horror-mode {
+    background: #050000;
+    color: #a00000;
+    font-family: monospace;
+}
+
+body.horror-mode p {
+    color: #a00000;
+}
+
+#horror h1 {
+    color: #ff0000;
+    font-size: 42px;
+    text-shadow: 0 0 20px red;
+    animation: flicker .15s infinite alternate;
+}
+
+#terminal {
+    width: min(90%, 550px);
+    margin-top: 25px;
+    text-align: left;
+    color: #ff3333;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.terminal-line {
+    background: #170000;
+    border: 1px solid #5c0000;
+    padding: 8px;
+    margin: 5px 0;
+    animation: appear .3s;
+}
+
+#finalMessage {
+    margin-top: 30px;
+    color: #ff0000;
+    font-size: 25px;
+    text-shadow: 0 0 15px red;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: .4; }
+    100% { opacity: 1; }
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* FAKE FULL SCREEN ERROR */
+
+#error {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #fff;
+    color: #333;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.error-content {
+    max-width: 500px;
+    width: 100%;
+}
+
+.error-icon {
+    font-size: 45px;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.error-content h2 {
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.error-content p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.error-code {
+    font-size: 12px !important;
+    color: #888 !important;
+}
+
+.error-content button {
+    background: #1a73e8;
+    border-radius: 4px;
+    letter-spacing: 0;
+    padding: 10px 25px;
+}
